@@ -56,7 +56,7 @@ The [APIs](https://docs.vitasdk.org/) are gathered from revering the Vita's firm
 
 ### Plugins and Extensions
 
-It is highly recommend that you are familiar with writing homebrews before attempting to write a plugin, which is significantly more difficult to do. Advanced developers can check out [taiHEN](https://tai.henkaku.xyz/) for a substrate that allows you to hook system functions.
+It is highly recommended that you are familiar with writing homebrews before attempting to write a plugin, which is significantly more difficult to do. Advanced developers can check out [taiHEN](https://tai.henkaku.xyz/) for a substrate that allows you to hook system functions.
 
 ## Building
 
@@ -74,4 +74,4 @@ Currently, there is minimal debugging support. If your app crashes, a core dump 
 
 Thanks to the [Vita SDK team](https://github.com/orgs/vitasdk/people) for creating everything! The logo was designed by [@Acemad_](https://twitter.com/Acemad_).
 
-You can find most of us in the [#vitasdk](irc://chat.freenode.net/vitasdk) room in FreeNode IRC. If you have any questions or need any help, don't hesitate to ask! We also have a [forums](https://forums.vitasdk.org/) for discussions and a [wiki](https://wiki.henkaku.xyz/) for details on reversing engineering the Vita.
+You can find most of us in the [#vitasdk room in FreeNode IRC](http://webchat.freenode.net/?channels=%23vitasdk). If you have any questions or need any help, don't hesitate to ask! We also have a [forums](https://forums.vitasdk.org/) for discussions and a [wiki](https://wiki.henkaku.xyz/) for details on reversing engineering the Vita.

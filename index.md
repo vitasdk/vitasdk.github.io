@@ -19,7 +19,7 @@ Install the following (adapt the command for your system): `apt-get install make
 If you have [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide), then the recommended way is to follow the Linux directions above. Otherwise, continue reading.
 
 1. Install [msys2](http://repo.msys2.org/distrib/msys2-x86_64-latest.exe)
-2. Run msys2 shell and install the dependencies: `pacman -Su make git cmake tar mingw64/mingw-w64-x86_64-libwinpthread-git`
+2. Run mingw64 shell and install the dependencies: `pacman -Su make git cmake tar mingw64/mingw-w64-x86_64-libwinpthread-git`
 
 ## Installing
 
@@ -38,7 +38,7 @@ cp config.sample config
 ./install-all.sh
 ```
 
-This will install the toolchain and the most common libraries (including zlib, freetype, [libvita2d](https://github.com/xerpi/libvita2d) and more).
+This will install the toolchain and the most common libraries (including zlib, freetype, [libvita2d](https://github.com/xerpi/libvita2d), [taihen](https://tai.henkaku.xyz/) and more).
 
 ## Updating
 

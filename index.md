@@ -10,9 +10,8 @@ Install the following (adapt the command for your system): `apt-get install make
 
 ### OSX
 
-1. Install XCode Command Line Tools with `xcode-select --install`
-2. Install either [brew](http://brew.sh) or [MacPorts](https://www.macports.org)
-3. Run either `brew install wget cmake` or `port install wget cmake`.
+1. Install either [brew](http://brew.sh) or [MacPorts](https://www.macports.org)
+2. Run either `brew install wget cmake` or `port install wget cmake`.
 
 ### Windows
 
@@ -24,16 +23,17 @@ If you have [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/command
 ## Installing
 
 Set the environment variable `VITASDK` to be the install destination for Vita SDK. We recommend using `/usr/local/vitasdk`. We also recommend making the change to your `.bashrc` or equivalent (`.bash_profile` on OSX) since using the toolchain requires `VITASDK` to be set.
+
 ```
 export VITASDK=/usr/local/vitasdk
 export PATH=$VITASDK/bin:$PATH # add vitasdk tool to $PATH
 ```
 
 Download the [host package manager](https://github.com/vitasdk/vdpm) and install to `$VITASDK`
+
 ```
 git clone https://github.com/vitasdk/vdpm
 cd vdpm
-cp config.sample config
 ./bootstrap-vitasdk.sh
 ./install-all.sh
 ```

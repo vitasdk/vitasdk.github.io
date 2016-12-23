@@ -1,7 +1,20 @@
 title: Vita SDK
-description: 
+description: Opensource and free SDK for the PS Vita
 google_analytics: 
-show_downloads: true
+
+show_autobuild: true
+autobuild_url: https://github.com/vitasdk/autobuilds/releases
+
+show_documentation: true
+documentation_url: http://docs.vitasdk.org/
+
+show_forum: true
+forum_url: https://forums.vitasdk.org/
+
+show_irc: true
+irc_url: http://webchat.freenode.net/?channels=%23vitasdk
+
+
 theme: jekyll-theme-hacker
 
 gems:

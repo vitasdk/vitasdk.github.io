@@ -1,4 +1,4 @@
-Vita SDK is an open source toolchain for PlayStation&reg; Vita development. This allows you to create applications, games, and more (homebrew) to run on hacked Vita consoles. You can find more information on the hack [here](https://henkaku.xyz/).
+[Vita SDK](https://github.com/vitasdk/) is an open source toolchain for PlayStation&reg; Vita development. This allows you to create applications, games, and more (homebrew) to run on hacked Vita consoles. You can find more information on the hack [here](https://henkaku.xyz/).
 
 # Getting Started
 

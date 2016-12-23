@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+      <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+
+        <section id="downloads">
+          {% if site.show_autobuild %}
+            <a href="{{ site.autobuild_url }}" class="btn">Autobuilds</a>
+          {% endif %}
+          {% if site.show_documentation %}
+          <a href="{{ site.documentation_url }}" class="btn">Documentation</a>
+          {% endif %}
+          {% if site.show_forum %}
+          <a href="{{ site.forum_url }}" class="btn">Forums</a>
+          {% endif %}
+          {% if site.show_irc %}
+          <a href="{{ site.irc_url }}" class="btn">Chat with us</a>
+          {% endif %}
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        {{ content }}
+      </section>
+    </div>
+
+    {% if site.google_analytics %}
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+        try {
+          var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      </script>
+    {% endif %}
+  </body>
+</html>
+          {% if site.show_irc %}
+          <a href="{{ site.irc_url }}" class="btn">Chat with us</a>
+          {% endif %}
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        {{ content }}
+      </section>
+    </div>
+
+    {% if site.google_analytics %}
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+        try {
+          var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      </script>
+    {% endif %}
+  </body>
+</html>

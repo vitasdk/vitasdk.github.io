@@ -1,8 +1,22 @@
 title: Vita SDK
-description: 
+description: Development tools for PS Vita
 google_analytics: 
-show_downloads: true
+show_downloads: false
 theme: jekyll-theme-hacker
+
+links:
+  - name: Forums
+    url: https://forums.vitasdk.org
+  - name: APIs
+    url: https://docs.vitasdk.org
+  - name: Samples
+    url: https://github.com/vitasdk/samples
+  - name: HENkaku
+    url: https://henkaku.xyz
+  - name: taiHEN
+    url: https://tai.henkaku.xyz
+  - name: IRC
+    url: http://webchat.freenode.net/?channels=%23vitasdk
 
 gems:
   - jekyll-mentions

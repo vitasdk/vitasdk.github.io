@@ -52,7 +52,7 @@ To remove all traces of Vita SDK, just delete your `$VITASDK` directory. You can
 
 ## Writing Code
 
-The [APIs](https://docs.vitasdk.org/) are gathered from revering the Vita's firmware. It includes everything you can do with the system. It is recommended that you start by cloning the [samples](https://github.com/vitasdk/samples) and by reading through them and understanding them. The environment is POSIX but the true power comes from the Sony specific [APIs](https://docs.vitasdk.org/).
+The [APIs](https://docs.vitasdk.org/) are gathered from reversing the Vita's firmware. It includes everything you can do with the system. It is recommended that you start by cloning the [samples](https://github.com/vitasdk/samples) and by reading through them and understanding them. The environment is POSIX but the true power comes from the Sony specific [APIs](https://docs.vitasdk.org/).
 
 ### Plugins and Extensions
 

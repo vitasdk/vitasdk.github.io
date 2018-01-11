@@ -70,6 +70,12 @@ To run homebrew, you need a hacked Vita or PS TV. Currently the only hack is [HE
 
 Currently, there is minimal debugging support. If your app crashes, a core dump will be generated in `ux0:data`. You can then [parse the core dump](https://github.com/xyzz/vita-parse-core) to figure out what caused the crash. If you would like to help contribute to the Vita SDK project, we would love to have a debugger for the system.
 
+## Porting libraries
+
+vitasdk ships with a flexible `makepkg`-based build system for building packages that can later be installed into the SDK. To get started, clone [vitasdk/packages](https://github.com/vitasdk/packages), `cd` into a directory with a `VITABUILD` file and run `vita-makepkg`. Once the package is built, you can install it with `vdpm ./name-version-arm.tar.xz`.
+
+If you want to write your own `VITABUILD` file, here are a few examples that you can follow: [a library using autotools-style build](https://github.com/vitasdk/packages/blob/master/expat/VITABUILD), [a library using CMake](https://github.com/vitasdk/packages/blob/master/glm/VITABUILD), and [a library where a Vita-specific patch is required](https://github.com/vitasdk/packages/blob/master/libsndfile/VITABUILD).
+
 # Community
 
 Thanks to the [Vita SDK team](https://github.com/orgs/vitasdk/people) for creating everything! The logo was designed by [@Acemad_](https://twitter.com/Acemad_).

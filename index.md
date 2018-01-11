@@ -42,7 +42,7 @@ This will install the toolchain and the most common libraries (including zlib, f
 
 ## Updating
 
-Right now, there is no easy flow for updating the toolchain. You can download the latest [autobuild](https://github.com/vitasdk/autobuilds/releases) and extract it to `$VITASDK`, replacing the current installation. Your installed static libraries should not be affected. You can also update individual packages and install new ones using [vdpm](https://github.com/vitasdk/vdpm).
+With vitasdk installed and in your `PATH`, just run `vitasdk-update` to get the latest toolchain build.
 
 ## Removing
 

@@ -17,6 +17,10 @@ links:
     url: https://henkaku.xyz
   - name: taiHEN
     url: https://tai.henkaku.xyz
+  - name: Discord
+    url: https://discord.gg/AQc7KWG
+  - name: Matrix
+    url: https://matrix.to/#/!WMcHXkArACbUaOtreb:matrix.org?via=davee.pro&via=matrix.org&via=t2bot.io
   - name: IRC
     url: http://webchat.freenode.net/?channels=%23vitasdk
 

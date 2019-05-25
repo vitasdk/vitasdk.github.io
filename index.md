@@ -18,7 +18,14 @@ Install the following (adapt the command for your system): `apt-get install make
 If you have [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide), then the recommended way is to follow the Linux directions above. Otherwise, continue reading.
 
 1. Install [msys2](http://repo.msys2.org/distrib/msys2-x86_64-latest.exe)
-2. Run mingw64 shell and install the dependencies: `pacman -Su make git cmake tar mingw64/mingw-w64-x86_64-libwinpthread-git`
+2. Run mingw64 shell (as administrator) and install the dependencies: 
+
+`pacman -Su make git cmake tar mingw64/mingw-w64-x86_64-libwinpthread-git`
+
+and
+
+`pacman -S mingw-w64-x86_64-python3-bsddb3 mingw-w64-x86_64-gexiv2 mingw-w64-x86_64-ghostscript mingw-w64-x86_64-python3-cairo mingw-w64-x86_64-python3-gobject mingw-w64-x86_64-python3-icu mingw-w64-x86_64-iso-codes mingw-w64-x86_64-hunspell mingw-w64-x86_64-hunspell-en mingw-w64-x86_64-enchant`
+note: Always run msys2 as administrator!
 
 ## Installing
 
@@ -64,7 +71,7 @@ Building is done with CMake and you should familiarize yourself with the [hello 
 
 ## Running
 
-To run homebrew, you need a hacked Vita or PS TV. Currently the only hack is [HENkaku](https://henkaku.xyz/) which requires firmware 3.60. Once you installed HENkaku, open up molecularShell and copy your built VPK to `ux0:data` through FTP. You can then install it as a bubble.
+To run homebrew, you need a hacked Vita or PS TV. Currently only known hacks are [HENkaku](https://henkaku.xyz/) which requires firmware 3.60, [h-encore](https://github.com/soarqin/finalhe) which requires firmware 3.65 - 3.68, and [Trinity](https://github.com/TheOfficialFloW/Trinity) which requires firmware 3.69 - 3.70 (if you are on firmware above 3.61 it's recommended to downgrade to 3.60 using modoru) Once you installed HENkaku, h-encore or Trinity, open up molecularShell/VitaShell and copy your built VPK to `ux0:data` through FTP. You can then install it as a bubble.
 
 ## Debugging
 

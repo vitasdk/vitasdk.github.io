@@ -71,7 +71,7 @@ Building is done with CMake and you should familiarize yourself with the [hello 
 
 ## Running
 
-To run homebrew, you need a hacked Vita or PS TV. Currently only known hacks are [HENkaku](https://henkaku.xyz/) which requires firmware 3.60, [h-encore](https://github.com/soarqin/finalhe) which requires firmware 3.65 - 3.68, and [Trinity](https://github.com/TheOfficialFloW/Trinity) which requires firmware 3.69 - 3.70 (if you are on firmware above 3.61 it's recommended to downgrade to 3.60 using modoru) Once you installed HENkaku, h-encore or Trinity, open up molecularShell/VitaShell and copy your built VPK to `ux0:data` through FTP. You can then install it as a bubble.
+To run homebrew, you need a hacked Vita or PS TV. Currently only known hacks are [HENkaku](https://henkaku.xyz/) which requires firmware 3.60, [h-encore](https://github.com/soarqin/finalhe) which requires firmware 3.65 - 3.68, and [Trinity](https://github.com/TheOfficialFloW/Trinity) which requires firmware 3.69 - 3.70 (after hacking your device if you are on firmware above 3.61 it's recommended to downgrade to 3.60 using modoru) Once you installed HENkaku, h-encore or Trinity, open up molecularShell/VitaShell and copy your built VPK to `ux0:data` through FTP. You can then install it as a bubble.
 
 ## Debugging
 

@@ -6,7 +6,7 @@ Vita SDK is an open source toolchain for PlayStation&reg; Vita development. This
 
 ### Linux
 
-Install the following (adapt the command for your system): `apt-get install make git-core cmake`
+Install the following (adapt the command for your system): `apt-get install make git-core cmake python`
 
 ### OSX
 

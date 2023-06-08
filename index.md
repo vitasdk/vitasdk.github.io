@@ -15,17 +15,19 @@ Install the following (adapt the command for your system): `apt-get install make
 
 ### Windows
 
-If you have [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide), then the recommended way is to follow the Linux directions above. Otherwise, continue reading.
+1. Install [WSL2](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
+2. Follow the Linux directions above.
 
-1. Install [msys2](http://repo.msys2.org/distrib/msys2-x86_64-latest.exe)
-2. Run mingw64 shell (as administrator) and install the dependencies: 
+#### Option
 
-`pacman -Su make git cmake tar mingw64/mingw-w64-x86_64-libwinpthread-git`
+By installing [Visual Studio Code](https://code.visualstudio.com/), you can flexibly develop in cooperation with WSL2.
 
-and
+To link Visual Studio Code and WSL2, select [Connect to WSL] from the remote button.
 
-`pacman -S mingw-w64-x86_64-python3-bsddb3 mingw-w64-x86_64-gexiv2 mingw-w64-x86_64-ghostscript mingw-w64-x86_64-python3-cairo mingw-w64-x86_64-python3-gobject mingw-w64-x86_64-python3-icu mingw-w64-x86_64-iso-codes mingw-w64-x86_64-hunspell mingw-w64-x86_64-hunspell-en mingw-w64-x86_64-enchant`
-note: Always run msys2 as administrator!
+![vs_code_remote.png](https://github.com/vitasdk/vitasdk.github.io/blob/master/res/vs_code_remote.png)
+
+
+Also if you have error line missing headers for vitasdk in Visual Studio Code, Create a directory named `.vscode` in the same directory as CMakeLists.txt and [download this file](https://github.com/vitasdk/vitasdk.github.io/blob/master/res/c_cpp_properties.json) there.
 
 ## Installing
 

@@ -24,10 +24,10 @@ By installing [Visual Studio Code](https://code.visualstudio.com/), you can flex
 
 To link Visual Studio Code and WSL2, select [Connect to WSL] from the remote button.
 
-![vs_code_remote.png](https://github.com/vitasdk/vitasdk.github.io/blob/master/res/vs_code_remote.png)
+![vs_code_remote.png](https://raw.githubusercontent.com/vitasdk/vitasdk.github.io/master/res/vs_code_remote.png)
 
 
-Also if you have error line missing headers for vitasdk in Visual Studio Code, Create a directory named `.vscode` in the same directory as CMakeLists.txt and [download this file](https://github.com/vitasdk/vitasdk.github.io/blob/master/res/c_cpp_properties.json) there.
+Also if you have error line missing headers for vitasdk in Visual Studio Code, Create a directory named `.vscode` in the same directory as CMakeLists.txt and [download this file](https://raw.githubusercontent.com/vitasdk/vitasdk.github.io/master/res/c_cpp_properties.json) there.
 
 ## Installing
 

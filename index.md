@@ -38,20 +38,27 @@ export VITASDK=/usr/local/vitasdk
 export PATH=$VITASDK/bin:$PATH # add vitasdk tool to $PATH
 ```
 
-Download the [host package manager](https://github.com/vitasdk/vdpm) and install to `$VITASDK`
+Download the [host package manager](https://github.com/vitasdk/vdpm) and bootstrap VitaSDK:
 
-```
+```bash
 git clone https://github.com/vitasdk/vdpm
 cd vdpm
 ./bootstrap-vitasdk.sh
-./install-all.sh
 ```
 
-This will install the toolchain and the most common libraries (including zlib, freetype, [libvita2d](https://github.com/xerpi/libvita2d), [taihen](https://tai.henkaku.xyz/) and more).
+To install packages and libraries (such as zlib, SDL2, libvita2d, taihen):
+
+```bash
+vdpm install zlib sdl2 libvita2d taihen
+```
 
 ## Updating
 
-With vitasdk installed and in your `PATH`, just run `vitasdk-update` to get the latest toolchain build.
+With vitasdk installed and in your `PATH`, update packages and channels using `vdpm`:
+
+```bash
+vdpm upgrade
+```
 
 ## Removing
 

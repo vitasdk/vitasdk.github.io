@@ -60,6 +60,39 @@ To install packages and libraries (such as zlib, SDL2, libvita2d, taihen) — de
 vdpm install zlib sdl2 libvita2d taihen
 ```
 
+## Docker
+
+If you would rather not install anything, the SDK also ships as an image:
+
+```bash
+docker run --rm -v "$PWD:/workspace" vitasdk/vitasdk:2026.08 \
+  sh -c 'cmake -B build -DCMAKE_TOOLCHAIN_FILE=$VITASDK/share/vita.toolchain.cmake && cmake --build build'
+```
+
+`$VITASDK` and `PATH` are already set inside the image, and `/workspace` is the
+working directory, so your project lands where the build expects it.
+
+| tag | what it is |
+| --- | --- |
+| `2026.08` | the series, rebuilt when its packages move or the base gets security updates |
+| `2026.08-20260813` | that series frozen on that day, never rewritten |
+| `latest` | the newest supported series — **2026.08** today |
+
+Two suffixes combine with any of them: `-minimal` leaves out the target
+packages (764 MB against 1.6 GB), and `-non-root` runs as the `vitasdk` user
+instead of as root, which is what Kubernetes `runAsNonRoot` needs. Every tag is
+a multi-architecture manifest covering `linux/amd64` and `linux/arm64`, both
+built natively. The [image repository](https://github.com/vitasdk/docker)
+documents the rest.
+
+Pin a dated tag in CI if you need the bytes to stay put: `latest` follows the
+supported series, so it moves the day a new release is announced.
+
+**If you were already pulling `vitasdk/vitasdk`:** `latest` used to be a
+nightly, rebuilt every night from whatever master held. It now follows the
+supported release instead. Nothing was removed, but the tag means something
+different, so a pipeline that pulled it is getting 2026.08 from now on.
+
 ## Updating
 
 There are two update commands, and the difference matters:

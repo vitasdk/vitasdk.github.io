@@ -47,6 +47,24 @@ Pin the exact bootstrap archive and its checksum — your builds become reproduc
 
 Bootstrap archives are published for every release and all four platforms (`x86_64-linux-gnu`, `aarch64-linux-gnu`, `arm64-apple-darwin`, `x86_64-w64-mingw32`) on the [autobuilds releases page](https://github.com/vitasdk/autobuilds/releases).
 
+## "I use the Docker image"
+
+This is the one change that reaches you without you doing anything.
+`vitasdk/vitasdk:latest` used to be a nightly, rebuilt every night from
+whatever master held. It now follows the newest supported release, so it is
+2026.08 from now on — same triplet, same headers, a toolchain that stops moving
+under you.
+
+Nothing was removed and no tag disappeared. If you want a build that cannot
+change at all, pin a dated tag:
+
+```bash
+docker pull vitasdk/vitasdk:2026.08-20260813
+```
+
+The [front page](/#docker) lists the rest of the tags, including the `-minimal`
+images that leave out the target packages.
+
 ## FAQ
 
 **Why signed channels?** In 2023 our build automation failed silently, and for a long time nobody noticed. Signed, sequenced channels make that class of failure impossible: the client either verifies fresh signed data, or it tells you loudly — never stale data pretending to be fresh.

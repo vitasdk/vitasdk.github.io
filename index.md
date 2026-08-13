@@ -18,6 +18,8 @@ Install the following (adapt the command for your system): `apt-get install make
 1. Install [WSL2](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 2. Follow the Linux directions above.
 
+A native Windows (mingw) toolchain is also published with every release, installable with `bootstrap-vitasdk.ps1` from [vdpm](https://github.com/vitasdk/vdpm) — but WSL2 is the recommended environment.
+
 #### Option
 
 By installing [Visual Studio Code](https://code.visualstudio.com/), you can flexibly develop in cooperation with WSL2.
@@ -38,7 +40,7 @@ export VITASDK=/usr/local/vitasdk
 export PATH=$VITASDK/bin:$PATH # add vitasdk tool to $PATH
 ```
 
-Download the [host package manager](https://github.com/vitasdk/vdpm) and bootstrap VitaSDK:
+Download the [host package manager](https://github.com/vitasdk/vdpm) and bootstrap VitaSDK. The bootstrap installs the newest supported release — currently **2026.08** — and selects its channel:
 
 ```bash
 git clone https://github.com/vitasdk/vdpm
@@ -46,7 +48,13 @@ cd vdpm
 ./bootstrap-vitasdk.sh
 ```
 
-To install packages and libraries (such as zlib, SDL2, libvita2d, taihen):
+Check what you got:
+
+```bash
+vdpm status
+```
+
+To install packages and libraries (such as zlib, SDL2, libvita2d, taihen) — dependencies are resolved automatically:
 
 ```bash
 vdpm install zlib sdl2 libvita2d taihen
@@ -54,11 +62,25 @@ vdpm install zlib sdl2 libvita2d taihen
 
 ## Updating
 
-With vitasdk installed and in your `PATH`, update packages and channels using `vdpm`:
+There are two update commands, and the difference matters:
 
 ```bash
-vdpm upgrade
+vdpm upgrade          # package fixes within your release — safe, never changes your toolchain
+vdpm refresh 2026.08  # move to a release, or re-sync the one you are on
 ```
+
+`vdpm upgrade` picks up package fixes published for the release you are on. It will never move you to a new toolchain behind your back: that only happens when you explicitly `refresh` to a newer release after one is announced.
+
+## Releases and channels
+
+VitaSDK ships as versioned, signed releases through package channels. List them with `vdpm channels`:
+
+- **2026.08** (supported) — what most homebrew is built against. Newlib 4.1.
+- **nightly** (development) — rebuilt continuously; expect it to move under you.
+
+Everything a channel serves is signed, and `vdpm` verifies it on every refresh and install. `vdpm status` prints the exact release and sequence you are on — include it in bug reports.
+
+Already have an older vitasdk install? See the [migration guide](migration) — nothing breaks if you stay, and moving takes minutes.
 
 ## Removing
 
@@ -96,4 +118,4 @@ If you want to write your own `VITABUILD` file, here are a few examples that you
 
 Thanks to the [Vita SDK team](https://github.com/orgs/vitasdk/people) for creating everything! The logo was designed by [@Acemad_](https://twitter.com/Acemad_).
 
-You can find most of us in the [#vitasdk room in FreeNode IRC](http://webchat.freenode.net/?channels=%23vitasdk). If you have any questions or need any help, don't hesitate to ask! We also have a [forums](https://forums.vitasdk.org/) for discussions and a [wiki](https://wiki.henkaku.xyz/) for details on reversing engineering the Vita.
+You can find most of us on [Discord](https://discord.gg/AQc7KWG) or Matrix (links at the top of this page). If you have any questions or need any help, don't hesitate to ask! We also have a [forums](https://forums.vitasdk.org/) for discussions and a [wiki](https://wiki.henkaku.xyz/) for details on reversing engineering the Vita.

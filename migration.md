@@ -94,4 +94,6 @@ images that leave out the target packages.
 
 **Do my projects need changes?** No. Same `arm-vita-eabi` triplet, same headers, same CMake toolchain file. If it built against a recent master build, it builds against 2026.08.
 
-**What about Windows?** Native Windows is supported: every release publishes a `x86_64-w64-mingw32` bootstrap archive, and vdpm ships a PowerShell installer (`bootstrap-vitasdk.ps1`). That said, we recommend WSL2 — follow the Linux instructions on the [front page](/).
+**I installed 2026.08 in the first hours it existed.** The installer published then unpacked the SDK as a plain directory tree, which pacman knows nothing about: `vdpm upgrade` finds nothing to upgrade and says so. Run the installer again into a new directory and you get an installation the client can maintain. Only that first day is affected.
+
+**What about Windows?** Native Windows is supported the same way every other host is: `bootstrap-vitasdk.ps1` installs a release, `vdpm install` adds libraries from the same signed channels, and `vdpm refresh` moves between series. Every release is built and installed on a Windows machine before it is published, so this is what the release does rather than a claim about it. We still recommend WSL2 — it is the environment most projects and CI already use, and the better-trodden path. Follow the Linux instructions on the [front page](/).

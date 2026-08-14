@@ -88,7 +88,7 @@ images that leave out the target packages.
 
 **Why signed channels?** In 2023 our build automation failed silently, and for a long time nobody noticed. Signed, sequenced channels make that class of failure impossible: the client either verifies fresh signed data, or it tells you loudly — never stale data pretending to be fresh.
 
-**What does "supported" mean for 2026.08?** It receives package updates and fixes via `vdpm upgrade` until the next release supersedes it. The toolchain within a release never changes.
+**What does "supported" mean for 2026.08?** It receives package updates and fixes via `vdpm upgrade` for as long as the channel index says `supported`. A newer release does not end that by arriving: support ends when the series is marked `deprecated`, and `vdpm channels` prints the status of every series, so it is something you can check rather than infer. The toolchain within a release never changes, and a release that has been published stays installable.
 
 **Where did the nightlies go?** The `nightly` development channel replaces the old master builds. It keeps rolling, it is where the next release comes from, and it is the right place to check whether something is already fixed. Expect it to move under you.
 

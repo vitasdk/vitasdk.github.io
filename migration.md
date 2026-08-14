@@ -1,3 +1,9 @@
+---
+layout: default
+title: Migrating to the release model
+permalink: /migration/
+---
+
 # Migrating to the release model
 
 VitaSDK now ships as versioned, signed releases through package channels. Nothing forces you to migrate: existing installs keep working and no download links die. What the new model gives you is knowing exactly which SDK you have, signature verification on everything you download, and one-command updates. Find your case below.

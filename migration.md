@@ -24,6 +24,25 @@ vdpm install libpng     # zlib comes along automatically
 
 Same library names you're used to. Dependencies resolve on their own.
 
+## "I run vitasdk-update"
+
+It is gone from 2026.08, and what it did is now two commands, on purpose:
+
+```bash
+vdpm upgrade          # package fixes inside your release
+vdpm refresh 2026.08  # move to a release, when one is announced
+```
+
+`vitasdk-update` did both at once and always jumped to the newest master
+build, which is exactly the thing that could change your compiler on a Tuesday
+without telling you.
+
+If you have an older install, its copy of `vitasdk-update` still runs. It
+resolves the `master-<os>-vN` artifacts, and those stopped being produced when
+the new pipeline took over, so it will keep succeeding and keep finding
+nothing. Nothing breaks and nothing 404s — but if you want updates again,
+install once through the bootstrap on the [front page](/).
+
 ## "How do I update now?"
 
 Two commands, two meanings:

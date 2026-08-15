@@ -75,7 +75,7 @@ working directory, so your project lands where the build expects it.
 | tag | what it is |
 | --- | --- |
 | `2026.08` | the series, rebuilt when its packages move or the base gets security updates |
-| `2026.08-20260813` | that series frozen on that day, never rewritten |
+| `2026.08-20260815` | that series frozen on that day, never rewritten |
 | `latest` | the newest supported series — **2026.08** today |
 
 Two suffixes combine with any of them: `-minimal` leaves out the target

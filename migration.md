@@ -84,7 +84,7 @@ Nothing was removed and no tag disappeared. If you want a build that cannot
 change at all, pin a dated tag:
 
 ```bash
-docker pull vitasdk/vitasdk:2026.08-20260813
+docker pull vitasdk/vitasdk:2026.08-20260815
 ```
 
 The [front page](/#docker) lists the rest of the tags, including the `-minimal`
